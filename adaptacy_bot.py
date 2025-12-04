@@ -54,11 +54,15 @@ if TELEGRAM_BOT_TOKEN == "8463773957:AAEYuHLfvOnTwidKFwIwFrWEoocEVhyKoKE":
     print("ПРЕДУПРЕЖДЕНИЕ: Вы используете скомпрометированный токен!")
     print("Рекомендуется сменить токен через @BotFather как можно скорее.")
 
-# Пути к файлам
-EXCEL_FILE_PATH = 'data/users.xlsx'
-PRESENTATION_PATH = r'C:\Users\Леново\PycharmProjects\PythonProject\Добро+пожаловать+в+Сбер_короткая_compressed.pdf'
-VIDEO_PATH = r'C:\Users\Леново\PycharmProjects\PythonProject\VID_20250907_122717.mp4'
-CORPORATE_IMAGE_PATH = r'C:\Users\Леново\PycharmProjects\PythonProject\календарь.jpg'  # Исправлено на .jpg
+
+# Получаем текущую директорию скрипта
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Относительные пути
+EXCEL_FILE_PATH = os.path.join(BASE_DIR, 'data', 'users.xlsx')
+PRESENTATION_PATH = os.path.join(BASE_DIR, 'Добро+пожаловать+в+Сбер_короткая_compressed.pdf')
+VIDEO_PATH = os.path.join(BASE_DIR, 'VID_20250907_122717.mp4')
+CORPORATE_IMAGE_PATH = os.path.join(BASE_DIR, 'календарь.jpg')
 
 # Отладка: проверка существования файлов
 print(f"Файл презентации существует: {os.path.exists(PRESENTATION_PATH)}")
