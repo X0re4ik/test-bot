@@ -228,7 +228,7 @@ async def handle_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "На встрече обсудили особенности бизнеса на Урале, какими качествами и ценностями должны обладать сотрудники Сбера и как достигать карьерных высот. "
             "Такие мероприятия заряжают энергией и успехом!"
         )
-        await update.message.reply_photo(photo=open(MEDIA_DIR / "новость2.jpg", "rb"))
+        await update.message.reply_photo(photo=open(MEDIA_DIR / "новость2.png", "rb"))
 
     return MAIN_MENU
 
